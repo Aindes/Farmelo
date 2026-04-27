@@ -5,7 +5,7 @@ import { dummyProducts, dummySupplies } from "@/lib/data";
 import { ShoppingCart, Search, Check, LayoutGrid, Leaf, Apple, Cherry, Wheat, MoreHorizontal, Pickaxe, TestTube, Bug, Sprout, X, Trash2, Plus, Minus, ArrowRight, ExternalLink } from "lucide-react";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import { useCart } from "@/context/CartContext";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
@@ -115,12 +115,12 @@ export default function MarketplacePage() {
 
   const uniqueLocations = ["Semua Lokasi", ...Array.from(new Set(rawItems.map(item => item.location)))];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.1 } }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
   };
