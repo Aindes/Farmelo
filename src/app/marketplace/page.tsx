@@ -69,7 +69,7 @@ export default function MarketplacePage() {
         id: randomCode,
         productId: firstItem.id,
         productName: firstItem.name,
-        farmerName: firstItem.farmerName || firstItem.supplierName || "Mitra Farmelo",
+        farmerName: (firstItem as any).farmerName || (firstItem as any).supplierName || "Mitra Farmelo",
         plantingDate: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
         harvestDate: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
         distributionDate: new Date().toISOString().split('T')[0],
