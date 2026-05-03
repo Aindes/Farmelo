@@ -153,7 +153,7 @@ export const dummySupplies: Supply[] = [
     category: "Pupuk",
     location: "Jawa Barat",
     dateAdded: "2023-10-01",
-    image: "https://images.unsplash.com/photo-1592424090710-1c39050868f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E1.jpg",
     supplierName: "PT Pupuk Tani Sejahtera",
   },
   {
@@ -163,7 +163,7 @@ export const dummySupplies: Supply[] = [
     category: "Benih",
     location: "Jawa Tengah",
     dateAdded: "2023-11-02",
-    image: "https://images.unsplash.com/photo-1595804561081-3aa0bc8801d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E2.jpg",
     supplierName: "Agro Seed Nusantara",
   },
   {
@@ -173,7 +173,7 @@ export const dummySupplies: Supply[] = [
     category: "Pupuk",
     location: "Jawa Timur",
     dateAdded: "2023-10-20",
-    image: "https://images.unsplash.com/photo-1611130383184-780c1021bc27?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E3.jpg",
     supplierName: "Bumi Subur Organik",
   },
   {
@@ -183,7 +183,7 @@ export const dummySupplies: Supply[] = [
     category: "Alat",
     location: "Jawa Barat",
     dateAdded: "2023-09-15",
-    image: "https://images.unsplash.com/photo-1615569420063-e380fb142a73?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E4.jpg",
     supplierName: "Toko Besi Tani",
   },
   {
@@ -193,7 +193,7 @@ export const dummySupplies: Supply[] = [
     category: "Pestisida",
     location: "Sumatera Utara",
     dateAdded: "2023-11-11",
-    image: "https://images.unsplash.com/photo-1628186175628-98eec6476103?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E5.jpg",
     supplierName: "Green Care Pest",
   },
   {
@@ -203,7 +203,7 @@ export const dummySupplies: Supply[] = [
     category: "Alat",
     location: "Jawa Timur",
     dateAdded: "2023-11-15",
-    image: "https://images.unsplash.com/photo-1592832122594-c0c6bad718b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E6.jpg",
     supplierName: "Agro Tech Solution",
   },
   {
@@ -213,7 +213,7 @@ export const dummySupplies: Supply[] = [
     category: "Benih",
     location: "Jawa Tengah",
     dateAdded: "2023-11-20",
-    image: "https://images.unsplash.com/photo-1595804561081-3aa0bc8801d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E7.png",
     supplierName: "Agro Seed Nusantara",
   },
   {
@@ -223,7 +223,7 @@ export const dummySupplies: Supply[] = [
     category: "Pupuk",
     location: "Kalimantan Selatan",
     dateAdded: "2023-11-25",
-    image: "https://images.unsplash.com/photo-1592424090710-1c39050868f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E8.jpg",
     supplierName: "Pupuk Kalimantan",
   },
   {
@@ -233,7 +233,7 @@ export const dummySupplies: Supply[] = [
     category: "Alat",
     location: "Jakarta",
     dateAdded: "2023-11-28",
-    image: "https://images.unsplash.com/photo-1615569420063-e380fb142a73?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+    image: "/E9.jpg",
     supplierName: "Toko Mesin Tani",
   },
 ];
