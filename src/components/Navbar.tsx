@@ -40,16 +40,16 @@ export default function Navbar() {
   };
 
   const baseLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "Beranda", path: "/" },
+    { name: "Tentang Kami", path: "/about" },
   ];
 
-  const contactLink = { name: "Contact", path: "/contact" };
+  const contactLink = { name: "Hubungi Kami", path: "/contact" };
 
   const privateLinks = [
-    { name: "Services", path: "/services" },
-    { name: "Marketplace", path: "/marketplace" },
-    { name: "Traceability", path: "/traceability" },
+    { name: "Layanan", path: "/services" },
+    { name: "Pasar", path: "/marketplace" },
+    { name: "Pelacakan", path: "/traceability" },
   ];
 
   const navLinks = user 
@@ -71,11 +71,8 @@ export default function Navbar() {
         }`}>
           <div className={`flex justify-between items-center ${scrolled ? "h-16 px-6" : "h-20 px-8"}`}>
             <div className="flex items-center">
-              <Link href="/" className="flex items-center gap-2 group">
-                <motion.div whileHover={{ rotate: 180 }} transition={{ duration: 0.3 }}>
-                  <Sprout className="h-8 w-8 text-brand-500" />
-                </motion.div>
-                <span className="font-extrabold text-xl tracking-tight text-neutral-800 group-hover:text-brand-500 transition-colors font-poppins">FARMELO</span>
+              <Link href="/" className="flex items-center">
+                <img src="/logo.png" alt="FARMELO Logo" className="h-10 w-auto object-contain" />
               </Link>
             </div>
 
@@ -134,7 +131,7 @@ export default function Navbar() {
                     onClick={handleLogout}
                     className="px-5 py-2 text-sm font-semibold text-brand-600 bg-brand-500/10 rounded-full hover:bg-brand-500/20 transition-colors shadow-sm"
                   >
-                    Logout
+                    Keluar
                   </motion.button>
                 </div>
               ) : (
@@ -143,14 +140,14 @@ export default function Navbar() {
                     href="/login"
                     className="px-4 py-2 text-sm font-bold text-neutral-500 hover:text-brand-500 transition-colors"
                   >
-                    Log in
+                    Masuk
                   </Link>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Link
                       href="/register"
                       className="px-6 py-2.5 text-sm font-bold text-white bg-brand-500 rounded-full shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transition-all hover:bg-brand-600"
                     >
-                      Sign up
+                      Daftar
                     </Link>
                   </motion.div>
                 </>
@@ -212,7 +209,7 @@ export default function Navbar() {
                       }}
                       className="block w-full text-center px-4 py-3 rounded-2xl text-base font-bold text-error bg-error/10 hover:bg-error/20 transition-colors"
                     >
-                      Logout
+                      Keluar
                     </button>
                   </div>
                 ) : (
@@ -222,14 +219,14 @@ export default function Navbar() {
                       onClick={() => setIsOpen(false)}
                       className="flex items-center justify-center px-4 py-3 bg-white border border-neutral-300 text-neutral-800 rounded-2xl text-base font-bold shadow-sm"
                     >
-                      Log in
+                      Masuk
                     </Link>
                     <Link
                       href="/register"
                       onClick={() => setIsOpen(false)}
                       className="flex items-center justify-center px-4 py-3 bg-brand-500 text-white rounded-2xl text-base font-bold shadow-md hover:bg-brand-600 transition-colors"
                     >
-                      Sign up
+                      Daftar
                     </Link>
                   </div>
                 )}

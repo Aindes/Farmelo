@@ -56,14 +56,11 @@ export default function Footer() {
         >
           {/* Brand Column */}
           <motion.div variants={itemVariants} className="space-y-6">
-            <Link href="/" className="flex items-center gap-3 group inline-flex">
-              <div className="bg-white/10 p-2 rounded-xl group-hover:bg-brand-500/20 transition-colors">
-                <Sprout className="h-8 w-8 text-brand-400 group-hover:text-brand-400 transition-colors" />
-              </div>
-              <span className="font-poppins font-black text-2xl tracking-tight text-white transition-colors">FARMELO</span>
+            <Link href="/" className="inline-flex items-center">
+              <img src="/logo.png" alt="FARMELO Logo" className="h-12 w-auto object-contain brightness-0 invert" />
             </Link>
             <p className="text-neutral-300 text-base leading-relaxed">
-              From Soil to Market, Seamlessly Connected. We empower farmers and connect them directly with buyers for a sustainable future.
+              Dari Lahan ke Pasar, Terhubung dengan Sempurna. Kami memberdayakan petani dan menghubungkan mereka langsung dengan pembeli untuk masa depan yang berkelanjutan.
             </p>
             <div className="flex space-x-4 pt-2">
               {[Globe, Facebook, Twitter, Instagram].map((Icon, i) => (
@@ -80,17 +77,17 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Tautan Cepat */}
           <motion.div variants={itemVariants} className="lg:pl-8">
             <h3 className="font-poppins font-bold text-lg text-white mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-brand-500 rounded-full"></span> Quick Links
+              <span className="w-8 h-1 bg-brand-500 rounded-full"></span> Tautan Cepat
             </h3>
             <ul className="space-y-4">
               {[
-                { name: "About Us", path: "/about" },
-                { name: "Services", path: "/services" },
-                { name: "Marketplace", path: "/marketplace" },
-                { name: "Traceability", path: "/traceability" }
+                { name: "Tentang Kami", path: "/about" },
+                { name: "Layanan", path: "/services" },
+                { name: "Pasar", path: "/marketplace" },
+                { name: "Pelacakan", path: "/traceability" }
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.path} className="text-neutral-300 hover:text-white text-base transition-colors flex items-center gap-2 group">
@@ -102,13 +99,13 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Services */}
+          {/* Layanan */}
           <motion.div variants={itemVariants}>
             <h3 className="font-poppins font-bold text-lg text-white mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-brand-500 rounded-full"></span> Services
+              <span className="w-8 h-1 bg-brand-500 rounded-full"></span> Layanan Kami
             </h3>
             <ul className="space-y-4">
-              {["Soil Testing", "Crop Consultation", "Grading & Packaging", "Distribution Hub"].map((service) => (
+              {["Uji Tanah", "Konsultasi Tanaman", "Grading & Packaging", "Pusat Distribusi"].map((service) => (
                 <li key={service} className="text-neutral-300 text-base flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-earth-500"></span>
                   {service}
@@ -117,10 +114,10 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Contact */}
+          {/* Kontak */}
           <motion.div variants={itemVariants}>
             <h3 className="font-poppins font-bold text-lg text-white mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-brand-500 rounded-full"></span> Contact Us
+              <span className="w-8 h-1 bg-brand-500 rounded-full"></span> Hubungi Kami
             </h3>
             <ul className="space-y-5">
               <li className="flex items-start gap-4 text-neutral-300 text-base group">
@@ -147,11 +144,11 @@ export default function Footer() {
           className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6"
         >
           <p className="text-neutral-400 text-sm font-medium">
-            &copy; {new Date().getFullYear()} FARMELO. All rights reserved.
+            &copy; {new Date().getFullYear()} FARMELO. Hak cipta dilindungi undang-undang.
           </p>
           <div className="flex space-x-8">
-            <Link href="#" className="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Terms of Service</Link>
+            <Link href="#" className="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Kebijakan Privasi</Link>
+            <Link href="#" className="text-neutral-400 hover:text-white text-sm font-medium transition-colors">Syarat & Ketentuan</Link>
           </div>
         </motion.div>
       </div>

@@ -144,7 +144,7 @@ export default function MarketplacePage() {
                 <div className="relative">
                   <input 
                     type="text" 
-                    placeholder="Cari sayuran, buah, atau lainnya..." 
+                    placeholder="Cari kebutuhan tani, bibit, atau lainnya..." 
                     className="w-full pl-4 pr-10 py-3 border border-neutral-200 rounded-xl bg-white text-neutral-800 focus:outline-none focus:ring-2 focus:ring-brand-500/50 shadow-sm"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
@@ -217,7 +217,7 @@ export default function MarketplacePage() {
                   className="relative p-2.5 border border-brand-500/20 rounded-xl bg-brand-50/50 text-brand-600 flex items-center gap-2 font-bold shadow-sm hover:bg-brand-100 transition-colors"
                 >
                   <ShoppingCart className="h-5 w-5" />
-                  <span>{cartItemCount} Items</span>
+                  <span>{cartItemCount} Produk</span>
                 </button>
               </div>
 
@@ -237,7 +237,7 @@ export default function MarketplacePage() {
                         </div>
                         <div className="px-2 flex-grow flex flex-col">
                           <h3 className="font-poppins font-bold text-lg text-neutral-800 mb-1 group-hover:text-brand-500 transition-colors line-clamp-2">{item.name}</h3>
-                          <p className="text-xs text-neutral-500 mb-3 font-medium">{item.location} • {userRole === "farmer" ? `Supplier: ${item.supplierName}` : `Farmer: ${item.farmerName}`}</p>
+                          <p className="text-xs text-neutral-500 mb-3 font-medium">{item.location} • {userRole === "farmer" ? `Pemasok: ${item.supplierName}` : `Petani: ${item.farmerName}`}</p>
                           <div className="mt-auto pt-3 border-t border-neutral-100 flex items-center justify-between gap-2">
                             <span className="font-black text-xl text-neutral-800 font-poppins">Rp {item.price.toLocaleString('id-ID')}<span className="text-xs font-semibold text-neutral-500 ml-1">{userRole === "farmer" ? "" : "/kg"}</span></span>
                             <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => handleAddToCart(item)} disabled={isAdded} className={`p-2.5 rounded-xl transition-all ${isAdded ? "bg-[#DDECDF] text-[#0A3215]" : "bg-white text-brand-600 border border-brand-200 hover:bg-brand-50"}`}>

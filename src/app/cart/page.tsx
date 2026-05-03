@@ -30,8 +30,8 @@ export default function CartPage() {
             animate={{ opacity: 1, y: 0 }}
             className="pt-10 mb-12 border-b border-neutral-300/50 pb-8"
           >
-            <h1 className="text-4xl md:text-5xl font-black text-neutral-800 mb-3 tracking-tight font-poppins">Your Cart</h1>
-            <p className="text-neutral-500 font-medium text-lg">Review your items and proceed to checkout.</p>
+            <h1 className="text-4xl md:text-5xl font-black text-neutral-800 mb-3 tracking-tight font-poppins">Keranjang Anda</h1>
+            <p className="text-neutral-500 font-medium text-lg">Tinjau produk pilihan Anda dan lanjutkan ke pembayaran.</p>
           </motion.div>
 
           {cart.length === 0 ? (
@@ -43,15 +43,15 @@ export default function CartPage() {
               <div className="bg-brand-500/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
                 <ShoppingBag className="h-10 w-10 text-brand-500" />
               </div>
-              <h3 className="text-2xl font-bold text-neutral-800 mb-3 font-poppins">Your cart is empty</h3>
-              <p className="text-neutral-500 text-lg mb-8 max-w-md mx-auto">Looks like you haven't added anything to your cart yet. Let's find some great produce!</p>
+              <h3 className="text-2xl font-bold text-neutral-800 mb-3 font-poppins">Keranjang Anda kosong</h3>
+              <p className="text-neutral-500 text-lg mb-8 max-w-md mx-auto">Sepertinya Anda belum menambahkan produk apapun ke keranjang. Mari temukan produk pertanian terbaik!</p>
               <Link href="/marketplace">
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-brand-500 text-white rounded-full font-bold shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:bg-brand-600 transition-all border border-brand-400 inline-flex items-center gap-2"
                 >
-                  Go to Marketplace <ArrowRight className="h-5 w-5" />
+                  Ke Pasar <ArrowRight className="h-5 w-5" />
                 </motion.button>
               </Link>
             </motion.div>
@@ -123,15 +123,15 @@ export default function CartPage() {
                 animate={{ opacity: 1, x: 0 }}
                 className="bg-brand-500 text-white p-8 rounded-[2rem] shadow-xl h-fit sticky top-28 border border-brand-400"
               >
-                <h2 className="text-2xl font-poppins font-bold mb-6">Order Summary</h2>
+                <h2 className="text-2xl font-poppins font-bold mb-6">Ringkasan Pesanan</h2>
                 <div className="space-y-4 text-base font-medium mb-8">
                   <div className="flex justify-between items-center opacity-90">
                     <span>Subtotal</span>
                     <span>Rp {cartTotal.toLocaleString("id-ID")}</span>
                   </div>
                   <div className="flex justify-between items-center opacity-90">
-                    <span>Shipping</span>
-                    <span className="text-brand-100">Calculated at checkout</span>
+                    <span>Pengiriman</span>
+                    <span className="text-brand-100">Dihitung saat checkout</span>
                   </div>
                   <div className="border-t border-brand-400/50 pt-6 mt-6 flex justify-between items-center">
                     <span className="font-bold text-xl font-poppins">Total</span>
@@ -145,7 +145,7 @@ export default function CartPage() {
                   onClick={handleCheckout}
                   className="w-full py-4 bg-white text-brand-600 rounded-2xl font-bold text-lg hover:shadow-lg transition-all mb-4 border border-white/80"
                 >
-                  Proceed to Checkout
+                  Lanjutkan ke Pembayaran
                 </motion.button>
                 
                 <Link href="/marketplace">
@@ -153,7 +153,7 @@ export default function CartPage() {
                     whileHover={{ backgroundColor: "rgba(255,255,255,0.15)" }}
                     className="w-full text-center py-4 border border-brand-400 text-white rounded-2xl font-bold transition-colors"
                   >
-                    Continue Shopping
+                    Lanjut Belanja
                   </motion.div>
                 </Link>
               </motion.div>

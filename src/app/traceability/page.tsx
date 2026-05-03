@@ -27,7 +27,7 @@ export default function TraceabilityPage() {
       setRecord(found);
     } else {
       setRecord(null);
-      setError("No record found for this tracking ID. Try 'TRC-88219A' or 'TRC-55421B'");
+      setError("Data tidak ditemukan untuk ID tracking ini. Coba 'TRC-88219A' atau 'TRC-55421B'");
     }
   };
 
@@ -37,9 +37,9 @@ export default function TraceabilityPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12 pt-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">Product Traceability</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">Pelacakan Produk</h1>
           <p className="text-xl text-foreground/70">
-            Track your produce from the exact farm it was grown to your table.
+            Lacak hasil bumi Anda dari ladang pertanian hingga ke meja makan Anda.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function TraceabilityPage() {
             <div className="flex-grow relative">
               <input
                 type="text"
-                placeholder="Enter Tracking ID (e.g., TRC-88219A)"
+                placeholder="Masukkan Kode Tracking (contoh: TRC-88219A)"
                 value={trackingId}
                 onChange={(e) => setTrackingId(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-brand-500 text-lg uppercase"
@@ -60,7 +60,7 @@ export default function TraceabilityPage() {
               type="submit"
               className="px-8 py-4 bg-brand-600 text-white font-bold rounded-xl hover:bg-brand-700 transition-colors shadow-md"
             >
-              Track Now
+              Lacak Sekarang
             </button>
           </form>
           {error && <p className="text-red-500 mt-4 text-center font-medium">{error}</p>}
@@ -94,14 +94,14 @@ export default function TraceabilityPage() {
                       <Sprout className="h-5 w-5" />
                     </div>
                     <div className="flex-grow pt-2">
-                      <h3 className="text-lg font-bold text-foreground">Planted</h3>
-                      <p className="text-foreground/60 text-sm mb-2">{new Date(record.plantingDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                      <h3 className="text-lg font-bold text-foreground">Ditanam</h3>
+                      <p className="text-foreground/60 text-sm mb-2">{new Date(record.plantingDate).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                       <div className="bg-background p-4 rounded-lg border border-border mt-2">
                         <div className="flex items-center gap-2 text-sm text-foreground/80 mb-1">
-                          <User className="h-4 w-4 text-brand-600" /> Farmer: <span className="font-semibold">{record.farmerName}</span>
+                          <User className="h-4 w-4 text-brand-600" /> Petani: <span className="font-semibold">{record.farmerName}</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-foreground/80">
-                          <MapPin className="h-4 w-4 text-brand-600" /> Location: {record.location}
+                          <MapPin className="h-4 w-4 text-brand-600" /> Lokasi: {record.location}
                         </div>
                       </div>
                     </div>
@@ -113,9 +113,9 @@ export default function TraceabilityPage() {
                       <CheckCircle2 className="h-5 w-5" />
                     </div>
                     <div className="flex-grow pt-2">
-                      <h3 className="text-lg font-bold text-foreground">Harvested & Quality Checked</h3>
-                      <p className="text-foreground/60 text-sm mb-2">{new Date(record.harvestDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                      <p className="text-sm text-foreground/70">Passed strict quality control. Graded and packaged safely.</p>
+                      <h3 className="text-lg font-bold text-foreground">Dipanen & Pemeriksaan Kualitas</h3>
+                      <p className="text-foreground/60 text-sm mb-2">{new Date(record.harvestDate).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                      <p className="text-sm text-foreground/70">Lulus kontrol kualitas yang ketat. Grading dan pengemasan dilakukan dengan aman.</p>
                     </div>
                   </div>
 
@@ -125,9 +125,9 @@ export default function TraceabilityPage() {
                       <Truck className="h-5 w-5" />
                     </div>
                     <div className="flex-grow pt-2">
-                      <h3 className="text-lg font-bold text-foreground">Distribution Hub</h3>
-                      <p className="text-foreground/60 text-sm mb-2">{new Date(record.distributionDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                      <p className="text-sm text-foreground/70">Currently being distributed to the final market destination.</p>
+                      <h3 className="text-lg font-bold text-foreground">Pusat Distribusi</h3>
+                      <p className="text-foreground/60 text-sm mb-2">{new Date(record.distributionDate).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                      <p className="text-sm text-foreground/70">Saat ini sedang didistribusikan ke tujuan pasar akhir.</p>
                     </div>
                   </div>
                 </div>

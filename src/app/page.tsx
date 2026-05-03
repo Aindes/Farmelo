@@ -47,33 +47,33 @@ export default function Home() {
   }, []);
   const features = [
     {
-      title: "Soil Testing",
-      description: "Get accurate analysis of your soil health to optimize crop yield.",
+      title: "Uji Tanah",
+      description: "Dapatkan analisis akurat tentang kesehatan tanah Anda untuk mengoptimalkan hasil panen.",
       icon: <TestTube2 className="h-6 w-6 text-brand-500" />
     },
     {
-      title: "Crop Consultation",
-      description: "Expert advice on crop selection, pest control, and sustainable farming.",
+      title: "Konsultasi Tanaman",
+      description: "Saran ahli dalam pemilihan tanaman, pengendalian hama, dan pertanian berkelanjutan.",
       icon: <Sprout className="h-6 w-6 text-brand-500" />
     },
     {
       title: "Grading & Packaging",
-      description: "Standardized quality control and eco-friendly packaging solutions.",
+      description: "Kontrol kualitas standar dan solusi pengemasan ramah lingkungan.",
       icon: <PackageCheck className="h-6 w-6 text-brand-500" />
     },
     {
-      title: "Distribution",
-      description: "Efficient logistics ensuring fresh delivery from farm to market.",
+      title: "Distribusi",
+      description: "Logistik efisien yang memastikan pengiriman segar dari ladang ke pasar.",
       icon: <Truck className="h-6 w-6 text-brand-500" />
     },
     {
-      title: "Marketplace",
-      description: "Direct connection between farmers and buyers, eliminating middlemen.",
+      title: "Pasar",
+      description: "Hubungan langsung antara petani dan pembeli, menghilangkan perantara.",
       icon: <ShoppingBasket className="h-6 w-6 text-brand-500" />
     },
     {
-      title: "Traceability",
-      description: "Transparent supply chain tracking for guaranteed freshness and origin.",
+      title: "Pelacakan",
+      description: "Pelacakan rantai pasok yang transparan untuk kesegaran dan asal yang terjamin.",
       icon: <ShieldCheck className="h-6 w-6 text-brand-500" />
     }
   ];
@@ -127,9 +127,9 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl pt-10"
             >
-              <h1 className="text-6xl md:text-[80px] font-black text-brand-500 tracking-tight mb-2 font-poppins leading-none">
-                FARMELO
-              </h1>
+              <div className="mb-4">
+                <img src="/logo.png" alt="FARMELO Logo" className="h-24 md:h-32 w-auto object-contain" />
+              </div>
 
               <h2 className="text-3xl md:text-[40px] font-bold text-neutral-800 mb-6 font-poppins leading-[48px]">
                 Dari Ladang ke Pasar,<br />Semua Terhubung
@@ -248,9 +248,9 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             className="text-center mb-20"
           >
-            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-black text-neutral-800 mb-6 font-poppins">Comprehensive Solutions</motion.h2>
+            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-black text-neutral-800 mb-6 font-poppins">Solusi Menyeluruh</motion.h2>
             <motion.p variants={itemVariants} className="text-xl text-neutral-500 max-w-2xl mx-auto font-medium">
-              We provide end-to-end services to ensure high quality produce and fair prices for everyone.
+              Kami menyediakan layanan dari hulu ke hilir untuk memastikan hasil pertanian berkualitas tinggi dan harga yang adil bagi semua orang.
             </motion.p>
           </motion.div>
 
@@ -352,7 +352,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-4xl md:text-[48px] leading-[56px] font-black mb-8 font-poppins"
           >
-            Ready to Transform Your Farming Experience?
+            Siap untuk Mengoptimalkan Pengalaman Pertanian Anda?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -361,7 +361,7 @@ export default function Home() {
             transition={{ delay: 0.1 }}
             className="text-[16px] mb-12 text-neutral-500 font-medium"
           >
-            Join our growing network of smart farmers and conscious buyers today.
+            Bergabunglah dengan jaringan petani cerdas dan pembeli sadar kami hari ini.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -398,7 +398,7 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="px-10 py-5 text-[16px] font-semibold rounded-full text-white bg-brand-500 shadow-xl hover:shadow-brand-500/20 transition-all inline-flex items-center gap-3 hover:bg-brand-600 font-sans"
                 >
-                  Get Started Now <ArrowRight className="h-6 w-6" />
+                  Mulai Sekarang <ArrowRight className="h-6 w-6" />
                 </motion.div>
               </Link>
             )}

@@ -181,15 +181,15 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Team Section */}
+        {/* Bagian Tim */}
         <div>
-          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Meet The Team</h2>
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">Tim Kami</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Dummy Team Members */}
+            {/* Anggota Tim */}
             {[
-              { name: 'Eka Wahyu Belianna', role: 'Co-Founder & Specialist', photo: '/foto-berlin.jpg' },
-              { name: 'Intan Desi Purnomo', role: 'Co-Founder & Specialist', photo: '/foto-intan.jpg' },
-              { name: 'Riski Dwi Nurcahyo', role: 'Co-Founder & Specialist', photo: '/foto-riski.jpg' }
+              { name: 'Eka Wahyu Belianna', role: 'Co-Founder & Spesialis', photo: '/foto-berlin.jpg' },
+              { name: 'Intan Desi Purnomo', role: 'Co-Founder & Spesialis', photo: '/foto-intan.jpg' },
+              { name: 'Riski Dwi Nurcahyo', role: 'Co-Founder & Spesialis', photo: '/foto-riski.jpg' }
             ].map((member, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">

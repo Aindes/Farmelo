@@ -33,17 +33,16 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-brand-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <Link href="/" className="inline-flex items-center gap-2 mb-6">
-          <Sprout className="h-10 w-10 text-brand-600" />
-          <span className="font-extrabold text-3xl tracking-tight text-brand-900">FARMELO</span>
+        <Link href="/" className="inline-flex items-center mb-6">
+          <img src="/logo.png" alt="FARMELO Logo" className="h-16 w-auto object-contain" />
         </Link>
         <h2 className="text-center text-3xl font-bold tracking-tight text-foreground">
-          Welcome back
+          Selamat datang kembali
         </h2>
         <p className="mt-2 text-center text-sm text-foreground/70">
-          Or{" "}
+          Atau{" "}
           <Link href="/register" className="font-medium text-brand-600 hover:text-brand-500">
-            create a new account
+            buat akun baru
           </Link>
         </p>
       </div>
@@ -59,7 +58,7 @@ export default function LoginPage() {
             
             <div>
               <label className="block text-sm font-medium text-foreground">
-                Email address
+                Alamat Email
               </label>
               <div className="mt-1">
                 <input
@@ -74,7 +73,7 @@ export default function LoginPage() {
 
             <div>
               <label className="block text-sm font-medium text-foreground">
-                Password
+                Kata Sandi
               </label>
               <div className="mt-1 relative">
                 <input
@@ -107,13 +106,13 @@ export default function LoginPage() {
                   className="h-4 w-4 rounded border-border text-brand-600 focus:ring-brand-500 bg-background"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-foreground/80">
-                  Remember me
+                  Ingat saya
                 </label>
               </div>
 
               <div className="text-sm">
                 <a href="#" className="font-medium text-brand-600 hover:text-brand-500">
-                  Forgot your password?
+                  Lupa kata sandi?
                 </a>
               </div>
             </div>
@@ -124,7 +123,7 @@ export default function LoginPage() {
                 disabled={loading}
                 className="flex w-full justify-center items-center gap-2 rounded-lg border border-transparent bg-brand-600 py-3 px-4 text-sm font-bold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-70 transition-colors"
               >
-                {loading ? "Signing in..." : <><LogIn className="h-4 w-4" /> Sign in</>}
+                {loading ? "Masuk..." : <><LogIn className="h-4 w-4" /> Masuk</>}
               </button>
             </div>
           </form>

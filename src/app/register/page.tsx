@@ -67,7 +67,7 @@ function RegisterForm() {
 
         <div>
           <label className="block text-sm font-medium text-foreground">
-            I want to join as a
+            Saya ingin bergabung sebagai
           </label>
           <div className="mt-2 grid grid-cols-2 gap-4">
             <button
@@ -79,7 +79,7 @@ function RegisterForm() {
                   : "bg-background border-border text-foreground/70 hover:border-brand-300"
               }`}
             >
-              Farmer
+              Petani
             </button>
             <button
               type="button"
@@ -90,14 +90,14 @@ function RegisterForm() {
                   : "bg-background border-border text-foreground/70 hover:border-brand-300"
               }`}
             >
-              Buyer
+              Pembeli
             </button>
           </div>
         </div>
         
         <div>
           <label className="block text-sm font-medium text-foreground">
-            Full Name
+            Nama Lengkap
           </label>
           <div className="mt-1">
             <input
@@ -112,7 +112,7 @@ function RegisterForm() {
 
         <div>
           <label className="block text-sm font-medium text-foreground">
-            Email address
+            Alamat Email
           </label>
           <div className="mt-1">
             <input
@@ -127,7 +127,7 @@ function RegisterForm() {
 
         <div>
           <label className="block text-sm font-medium text-foreground">
-            Password
+            Kata Sandi
           </label>
           <div className="mt-1 relative">
             <input
@@ -158,7 +158,7 @@ function RegisterForm() {
             disabled={loading}
             className="flex w-full justify-center items-center gap-2 mt-4 rounded-lg border border-transparent bg-brand-600 py-3 px-4 text-sm font-bold text-white shadow-sm hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-70 transition-colors"
           >
-            {loading ? "Creating account..." : <><UserPlus className="h-4 w-4" /> Register</>}
+            {loading ? "Mendaftarkan..." : <><UserPlus className="h-4 w-4" /> Daftar Sekarang</>}
           </button>
         </div>
       </form>
@@ -170,23 +170,22 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen bg-brand-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <Link href="/" className="inline-flex items-center gap-2 mb-6">
-          <Sprout className="h-10 w-10 text-brand-600" />
-          <span className="font-extrabold text-3xl tracking-tight text-brand-900">FARMELO</span>
+        <Link href="/" className="inline-flex items-center mb-6">
+          <img src="/logo.png" alt="FARMELO Logo" className="h-16 w-auto object-contain" />
         </Link>
         <h2 className="text-center text-3xl font-bold tracking-tight text-foreground">
-          Create an account
+          Buat akun baru
         </h2>
         <p className="mt-2 text-center text-sm text-foreground/70">
-          Already have an account?{" "}
+          Sudah punya akun?{" "}
           <Link href="/login" className="font-medium text-brand-600 hover:text-brand-500">
-            Log in instead
+            Masuk di sini
           </Link>
         </p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <Suspense fallback={<div className="text-center py-4">Loading...</div>}>
+        <Suspense fallback={<div className="text-center py-4">Memuat...</div>}>
           <RegisterForm />
         </Suspense>
       </div>

@@ -26,7 +26,7 @@ export interface TraceabilityRecord {
 export const dummyProducts: Product[] = [
   {
     id: "p1",
-    name: "Red Chili Premium",
+    name: "Cabai Merah Premium",
     price: 45000,
     qualityGrade: "Grade A",
     category: "Rempah",
@@ -38,7 +38,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p2",
-    name: "Fresh Mustard Greens",
+    name: "Sawi Hijau Segar",
     price: 15000,
     qualityGrade: "Grade A",
     category: "Sayuran",
@@ -50,7 +50,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p3",
-    name: "Cherry Tomatoes",
+    name: "Tomat Cherry",
     price: 25000,
     qualityGrade: "Grade B",
     category: "Buah",
@@ -62,7 +62,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p4",
-    name: "Green Beans",
+    name: "Buncis",
     price: 18000,
     qualityGrade: "Grade A",
     category: "Sayuran",
@@ -74,7 +74,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p5",
-    name: "Russet Potato",
+    name: "Kentang Russet",
     price: 22000,
     qualityGrade: "Grade A",
     category: "Sayuran",
@@ -86,7 +86,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p6",
-    name: "Organic Garlic",
+    name: "Bawang Putih Organik",
     price: 32000,
     qualityGrade: "Grade A",
     category: "Rempah",
@@ -98,7 +98,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p7",
-    name: "Sweet Corn",
+    name: "Jagung Manis",
     price: 12000,
     qualityGrade: "Grade A",
     category: "Sayuran",
@@ -110,7 +110,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p8",
-    name: "Organic Carrots",
+    name: "Wortel Organik",
     price: 18000,
     qualityGrade: "Grade A",
     category: "Sayuran",
@@ -122,7 +122,7 @@ export const dummyProducts: Product[] = [
   },
   {
     id: "p9",
-    name: "Red Onion Super",
+    name: "Bawang Merah Super",
     price: 28000,
     qualityGrade: "Grade A",
     category: "Rempah",
@@ -148,7 +148,7 @@ export interface Supply {
 export const dummySupplies: Supply[] = [
   {
     id: "s1",
-    name: "NPK Mutiara Fertilizer 16-16-16 (50kg)",
+    name: "Pupuk NPK Mutiara 16-16-16 (50kg)",
     price: 850000,
     category: "Pupuk",
     location: "Jawa Barat",
@@ -158,7 +158,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s2",
-    name: "Premium Tomato Seeds (10g)",
+    name: "Benih Tomat Premium (10g)",
     price: 45000,
     category: "Benih",
     location: "Jawa Tengah",
@@ -168,7 +168,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s3",
-    name: "Organic Compost (10kg)",
+    name: "Kompos Organik (10kg)",
     price: 35000,
     category: "Pupuk",
     location: "Jawa Timur",
@@ -178,7 +178,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s4",
-    name: "Heavy Duty Farming Hoe",
+    name: "Cangkul Baja Super",
     price: 120000,
     category: "Alat",
     location: "Jawa Barat",
@@ -188,7 +188,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s5",
-    name: "Bio-Pesticide Neem Oil (1L)",
+    name: "Pestisida Nabati Minyak Mimba (1L)",
     price: 75000,
     category: "Pestisida",
     location: "Sumatera Utara",
@@ -198,7 +198,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s6",
-    name: "Electric Sprayer 16L",
+    name: "Sprayer Elektrik 16L",
     price: 550000,
     category: "Alat",
     location: "Jawa Timur",
@@ -208,7 +208,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s7",
-    name: "Chili F1 Seeds Hybrid",
+    name: "Benih Cabai F1 Hybrid",
     price: 65000,
     category: "Benih",
     location: "Jawa Tengah",
@@ -218,7 +218,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s8",
-    name: "Urea Fertilizer Non-Subsidy",
+    name: "Pupuk Urea Non-Subsidi",
     price: 450000,
     category: "Pupuk",
     location: "Kalimantan Selatan",
@@ -228,7 +228,7 @@ export const dummySupplies: Supply[] = [
   },
   {
     id: "s9",
-    name: "Grass Cutter Machine",
+    name: "Mesin Potong Rumput",
     price: 1850000,
     category: "Alat",
     location: "Jakarta",
@@ -242,23 +242,23 @@ export const dummyTraceability: Record<string, TraceabilityRecord> = {
   "TRC-88219A": {
     id: "TRC-88219A",
     productId: "p1",
-    productName: "Red Chili Premium",
+    productName: "Cabai Merah Premium",
     farmerName: "Budi Santoso",
     plantingDate: "2023-08-15",
     harvestDate: "2023-11-20",
     distributionDate: "2023-11-22",
-    location: "Lembang, West Java",
-    status: "Delivered to Market",
+    location: "Lembang, Jawa Barat",
+    status: "Tiba di Pasar",
   },
   "TRC-55421B": {
     id: "TRC-55421B",
     productId: "p2",
-    productName: "Fresh Mustard Greens",
+    productName: "Sawi Hijau Segar",
     farmerName: "Ahmad Yani",
     plantingDate: "2023-10-05",
     harvestDate: "2023-11-18",
     distributionDate: "2023-11-19",
-    location: "Pangalengan, West Java",
-    status: "In Transit",
+    location: "Pangalengan, Jawa Barat",
+    status: "Dalam Perjalanan",
   }
 };
