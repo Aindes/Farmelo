@@ -71,8 +71,9 @@ export default function Navbar() {
         }`}>
           <div className={`flex justify-between items-center ${scrolled ? "h-16 px-6" : "h-20 px-8"}`}>
             <div className="flex items-center">
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center gap-2">
                 <img src="/logo.png" alt="FARMELO Logo" className="h-10 w-auto object-contain" />
+                <span className="text-xl font-black tracking-tighter text-[#0A3215] font-poppins">FARMELO</span>
               </Link>
             </div>
 

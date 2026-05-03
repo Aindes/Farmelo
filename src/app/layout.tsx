@@ -20,7 +20,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "FARMELO - Integrated Field-to-Market Platform",
-  description: "From Soil to Market, Seamlessly Connected. Farmelo empowers farmers and connects them with buyers.",
+  description: "Dari Lahan ke Pasar, Terhubung dengan Sempurna. Farmelo memberdayakan petani dan menghubungkan mereka langsung dengan pembeli.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
