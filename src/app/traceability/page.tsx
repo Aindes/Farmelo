@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { dummyTraceability, TraceabilityRecord } from "@/lib/data";
+import { getTrackingRecord } from "@/lib/tracking";
+import { TraceabilityRecord } from "@/lib/data";
 import { Search, MapPin, Calendar, CheckCircle2, User, Truck, Sprout } from "lucide-react";
 import ProtectedRoute from "@/components/ProtectedRoute";
 
@@ -16,21 +17,14 @@ export default function TraceabilityPage() {
     setHasSearched(true);
     setError("");
     
-    const id = trackingId.trim().toUpperCase();
+    const id = trackingId.trim();
     if (!id) {
       setError("Please enter a tracking ID");
       setRecord(null);
       return;
     }
 
-    // Check dummy data first
-    let found = dummyTraceability[id];
-    
-    // Check localStorage if not found in dummy data
-    if (!found && typeof window !== "undefined") {
-      const savedRecords = JSON.parse(localStorage.getItem('farmelo_tracking_records') || '{}');
-      found = savedRecords[id];
-    }
+    const found = getTrackingRecord(id);
 
     if (found) {
       setRecord(found);

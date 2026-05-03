@@ -10,6 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 import Link from "next/link";
+import { saveTrackingRecord } from "@/lib/tracking";
 
 export default function MarketplacePage() {
   const { cart, addToCart, removeFromCart, updateQuantity, clearCart, cartTotal, cartItemCount } = useCart();
@@ -62,7 +63,7 @@ export default function MarketplacePage() {
     const randomCode = `TRC-${Math.floor(10000 + Math.random() * 90000)}${String.fromCharCode(65 + Math.floor(Math.random() * 26))}`;
     
     // Save to localStorage so it can be tracked in Traceability page
-    if (cart.length > 0 && typeof window !== "undefined") {
+    if (cart.length > 0) {
       const firstItem = cart[0].product;
       const newRecord = {
         id: randomCode,
@@ -76,9 +77,7 @@ export default function MarketplacePage() {
         status: "Diproses",
       };
       
-      const savedRecords = JSON.parse(localStorage.getItem('farmelo_tracking_records') || '{}');
-      savedRecords[randomCode] = newRecord;
-      localStorage.setItem('farmelo_tracking_records', JSON.stringify(savedRecords));
+      saveTrackingRecord(newRecord);
     }
 
     setTrackingCode(randomCode);
