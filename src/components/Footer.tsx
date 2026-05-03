@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Sprout, Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Sprout, Phone, MapPin, Globe } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
 // Custom SVGs for Social Icons since lucide-react might not have them in this version
@@ -127,19 +127,13 @@ export default function Footer() {
                 <div className="bg-white/5 p-2 rounded-lg group-hover:bg-brand-500/20 transition-colors shrink-0">
                   <MapPin className="h-5 w-5 text-brand-400" />
                 </div>
-                <span className="pt-1">Jl. Pertanian No. 123, Bandung, West Java, Indonesia</span>
+                <span className="pt-1">Prambon, Kabupaten Nganjuk, Jawa Timur, Indonesia</span>
               </li>
               <li className="flex items-center gap-4 text-neutral-300 text-base group">
                 <div className="bg-white/5 p-2 rounded-lg group-hover:bg-brand-500/20 transition-colors shrink-0">
                   <Phone className="h-5 w-5 text-brand-400" />
                 </div>
-                <span>+62 812 3456 7890</span>
-              </li>
-              <li className="flex items-center gap-4 text-neutral-300 text-base group">
-                <div className="bg-white/5 p-2 rounded-lg group-hover:bg-brand-500/20 transition-colors shrink-0">
-                  <Mail className="h-5 w-5 text-brand-400" />
-                </div>
-                <span>hello@farmelo.com</span>
+                <span>085649146292</span>
               </li>
             </ul>
           </motion.div>
