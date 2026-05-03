@@ -16,18 +16,27 @@ export default function TraceabilityPage() {
     setHasSearched(true);
     setError("");
     
-    if (!trackingId.trim()) {
+    const id = trackingId.trim().toUpperCase();
+    if (!id) {
       setError("Please enter a tracking ID");
       setRecord(null);
       return;
     }
 
-    const found = dummyTraceability[trackingId.trim().toUpperCase()];
+    // Check dummy data first
+    let found = dummyTraceability[id];
+    
+    // Check localStorage if not found in dummy data
+    if (!found && typeof window !== "undefined") {
+      const savedRecords = JSON.parse(localStorage.getItem('farmelo_tracking_records') || '{}');
+      found = savedRecords[id];
+    }
+
     if (found) {
       setRecord(found);
     } else {
       setRecord(null);
-      setError("Data tidak ditemukan untuk ID tracking ini. Coba 'TRC-88219A' atau 'TRC-55421B'");
+      setError("Data tidak ditemukan untuk ID tracking ini. Pastikan kode yang Anda masukkan benar.");
     }
   };
 

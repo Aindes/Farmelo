@@ -14,6 +14,27 @@ export default function CartPage() {
 
   const handleCheckout = () => {
     const randomCode = `TRC-${Math.floor(10000 + Math.random() * 90000)}${String.fromCharCode(65 + Math.floor(Math.random() * 26))}`;
+    
+    // Save to localStorage so it can be tracked in Traceability page
+    if (cart.length > 0 && typeof window !== "undefined") {
+      const firstItem = cart[0].product;
+      const newRecord = {
+        id: randomCode,
+        productId: firstItem.id,
+        productName: firstItem.name,
+        farmerName: firstItem.farmerName || "Petani Farmelo",
+        plantingDate: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        harvestDate: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        distributionDate: new Date().toISOString().split('T')[0],
+        location: firstItem.location,
+        status: "Diproses",
+      };
+      
+      const savedRecords = JSON.parse(localStorage.getItem('farmelo_tracking_records') || '{}');
+      savedRecords[randomCode] = newRecord;
+      localStorage.setItem('farmelo_tracking_records', JSON.stringify(savedRecords));
+    }
+
     setTrackingCode(randomCode);
     setIsCheckoutSuccess(true);
     clearCart();
