@@ -47,34 +47,34 @@ export default function Home() {
   }, []);
   const features = [
     {
-      title: "Soil Testing",
-      description: "Get accurate analysis of your soil health to optimize crop yield.",
-      icon: <TestTube2 className="h-6 w-6 text-brand-500" />
+      title: "Uji tanah dan penyakit tanaman",
+      description: "Analisis kondisi tanah untuk mengetahui kebutuhan nutrisi dan meningkatkan produktivitas, serta konsultasi mengenai penyakit tanaman beserta rekomendasinya.",
+      image: "/C1.jpg"
     },
     {
-      title: "Crop Consultation",
-      description: "Expert advice on crop selection, pest control, and sustainable farming.",
-      icon: <Sprout className="h-6 w-6 text-brand-500" />
+      title: "Pendampingan budidaya",
+      description: "Pendampingan dari tahap perencanaan hingga panen untuk hasil optimal.",
+      image: "/C2.jpg"
     },
     {
-      title: "Grading & Packaging",
-      description: "Standardized quality control and eco-friendly packaging solutions.",
-      icon: <PackageCheck className="h-6 w-6 text-brand-500" />
+      title: "Grading & packaging",
+      description: "Standarisasi kualitas hasil panen agar siap bersaing di pasar.",
+      image: "/C3.jpg"
     },
     {
-      title: "Distribution",
-      description: "Efficient logistics ensuring fresh delivery from farm to market.",
-      icon: <Truck className="h-6 w-6 text-brand-500" />
+      title: "Distribusi Terintegrasi",
+      description: "Distribusi produk secara efisien dan tepat waktu ke pasar atau buyer.",
+      image: "/C4.jpg"
     },
     {
-      title: "Marketplace",
-      description: "Direct connection between farmers and buyers, eliminating middlemen.",
-      icon: <ShoppingBasket className="h-6 w-6 text-brand-500" />
+      title: "Market place dan offline market",
+      description: "Menghubungkan petani dengan buyer secara langsung dan aman baik secara online/offline.",
+      image: "/C5.jpg"
     },
     {
       title: "Traceability",
-      description: "Transparent supply chain tracking for guaranteed freshness and origin.",
-      icon: <ShieldCheck className="h-6 w-6 text-brand-500" />
+      description: "Sistem pelacakan produk dari lahan hingga konsumen.",
+      image: "/C6.jpg"
     }
   ];
 
@@ -250,9 +250,9 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             className="text-center mb-20"
           >
-            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-black text-neutral-800 mb-6 font-poppins">Comprehensive Solutions</motion.h2>
+            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-black text-neutral-800 mb-6 font-poppins">Layanan Kami</motion.h2>
             <motion.p variants={itemVariants} className="text-xl text-neutral-500 max-w-2xl mx-auto font-medium">
-              We provide end-to-end services to ensure high quality produce and fair prices for everyone.
+              Kami menyediakan layanan dari hulu ke hilir untuk memastikan kualitas terbaik dan harga yang adil bagi semua.
             </motion.p>
           </motion.div>
 
@@ -267,18 +267,33 @@ export default function Home() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="bg-card rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl transition-all border border-neutral-300/50 relative group overflow-hidden"
+                whileHover={{ y: -10 }}
+                className="bg-card rounded-[1.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl transition-all border border-neutral-300/50 relative group overflow-hidden flex flex-col"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem]"></div>
-                <div className="relative z-10">
-                  <div className="h-16 w-16 rounded-2xl bg-brand-500/10 flex items-center justify-center mb-8 border border-brand-500/20 group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-neutral-800 mb-4 font-poppins">{feature.title}</h3>
-                  <p className="text-neutral-500 leading-relaxed text-base font-medium">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="h-48 w-full overflow-hidden relative">
+                  <img 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500"></div>
+                </div>
+
+                <div className="relative z-10 p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-neutral-800 mb-3 font-poppins">{feature.title}</h3>
+                  <p className="text-neutral-500 leading-relaxed text-sm font-medium mb-8 flex-1">
                     {feature.description}
                   </p>
+                  <a 
+                    href="https://wa.me/6285649146292" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm text-center rounded-xl transition-all shadow-md hover:-translate-y-1"
+                  >
+                    Ajukan Layanan
+                  </a>
                 </div>
               </motion.div>
             ))}
