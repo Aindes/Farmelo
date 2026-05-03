@@ -186,17 +186,21 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center text-foreground mb-12">Meet The Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {/* Dummy Team Members */}
-            {[1, 2, 3].map((member) => (
-              <div key={member} className="text-center">
+            {[
+              { name: 'Eka Wahyu Belianna', role: 'Co-Founder & Specialist', photo: '/foto-berlin.jpg' },
+              { name: 'Intan Desi Purnomo', role: 'Co-Founder & Specialist', photo: '/foto-intan.jpg' },
+              { name: 'Riski Dwi Nurcahyo', role: 'Co-Founder & Specialist', photo: '/foto-riski.jpg' }
+            ].map((member, index) => (
+              <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">
                   <img
-                    src={`https://i.pravatar.cc/150?img=${member * 10}`}
-                    alt={`Team member ${member}`}
+                    src={member.photo}
+                    alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-foreground">John Doe {member}</h3>
-                <p className="text-brand-600 text-sm font-medium">Co-Founder & Specialist</p>
+                <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                <p className="text-brand-600 text-sm font-medium">{member.role}</p>
               </div>
             ))}
           </div>
